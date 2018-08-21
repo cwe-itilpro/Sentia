@@ -1,0 +1,27 @@
+{
+  "if": {
+    "allOf": [
+      {
+        "not": {
+          "field": "name",
+          "like": "Microsoft.Compute"
+        }
+      },
+      {
+        "not": {
+          "field": "name",
+          "like": "Microsoft.Network"
+        }
+      },
+      {
+        "not": {
+          "field": "name",
+          "like": "Microsoft.Storage"
+        }
+      }
+    ]
+  },
+  "then": {
+    "effect": "deny"
+  }
+}
